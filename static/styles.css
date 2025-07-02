@@ -1,0 +1,274 @@
+/* Modern CSS Styles - Static Light Blue Theme */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #ADD8E6;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    background: white;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 90%;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 2rem;
+    font-size: 2.2rem;
+    font-weight: 600;
+}
+
+h2 {
+    color: #555;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.intro-section {
+    margin-bottom: 2rem;
+}
+
+.intro-box {
+    background: white;
+    border: 1px solid #8badfe;;
+    border-radius: 6px;
+    padding: 2rem;
+    margin: 1rem 0;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.intro-box:hover {
+    transform: translateY(-5px);
+}
+
+#intro-text {
+    color: #2C3E50;
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.refresh-button {
+    background: #4682B4;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.refresh-button:hover {
+    background: #5A9BD4;
+    transform: translateY(-2px);
+    box-shadow: 0 7px 20px rgba(0, 0, 0, 0.3);
+}
+
+.refresh-button:active {
+    transform: translateY(0);
+}
+
+.status {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: white;
+    border: 1px solid #ADD8E6;
+    border-radius: 6px;
+}
+
+#status-text {
+    color: #666;
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+.loading {
+    opacity: 0.6;
+}
+
+.error {
+    background: #FFB6C1;
+}
+
+.success {
+    background: #98FB98;
+}
+
+/* Chat Interface Styles */
+.chat-section {
+    margin-bottom: 2rem;
+}
+
+.chat-box {
+    background: white;
+    border: 1px solid #ADD8E6;
+    border-radius: 6px;
+    padding: 1rem;
+    margin: 1rem 0;
+    height: 400px;
+    overflow-y: auto;
+}
+
+.chat-messages {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.message {
+    padding: 0.8rem;
+    border-radius: 6px;
+    max-width: 85%;
+    word-wrap: break-word;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.message.user {
+    background: #E6F3FF;
+    color: #2C3E50;
+    align-self: flex-end;
+    border: 1px solid #B3D9FF;
+}
+
+.message.assistant {
+    background: #F0F8FF;
+    color: #2C3E50;
+    align-self: flex-start;
+    border: 1px solid #D0E7FF;
+}
+
+.message.system {
+    background: #F5F5F5;
+    color: #666;
+    align-self: center;
+    font-style: italic;
+    font-size: 0.8rem;
+    max-width: 95%;
+}
+
+.message-role {
+    font-weight: 600;
+    font-size: 0.8rem;
+    margin-bottom: 0.3rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.clear-button {
+    background: #DC143C;
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-left: 10px;
+}
+
+.clear-button:hover {
+    background: #B22222;
+    transform: translateY(-1px);
+}
+
+.input-section {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.message-input {
+    flex: 1;
+    padding: 12px 15px;
+    border: 2px solid #ADD8E6;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-family: inherit;
+    background: white;
+    color: #2C3E50;
+    transition: border-color 0.3s ease;
+}
+
+.message-input:focus {
+    outline: none;
+    border-color: #4682B4;
+    box-shadow: 0 0 0 2px rgba(70, 130, 180, 0.2);
+}
+
+.message-input::placeholder {
+    color: #999;
+    font-style: italic;
+}
+
+.send-button {
+    background: #1d99ff;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.send-button:hover {
+    background: #5A9BD4;
+    transform: translateY(-1px);
+}
+
+.send-button:disabled {
+    background: #cccccc;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.send-button.loading {
+    background: #cccccc;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.spinner {
+    width: 16px;
+    height: 16px;
+    border: 2px solid #ffffff;
+    border-top: 2px solid transparent;
+    border-radius: 50%;
+    display: inline-block;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.controls-section {
+    margin-top: 1rem;
+    text-align: center;
+    padding-top: 1rem;
+    border-top: 1px solid #E6F3FF;
+}

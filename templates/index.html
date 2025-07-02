@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Assistant - AI-Powered Weather Advisor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>🌤️ Weather Assistant</h1>
+        <div class="chat-section">
+            <div id="chat-display" class="chat-box">
+                <div id="chat-messages" class="chat-messages">
+                    <!-- Chat messages will be displayed here -->
+                </div>
+            </div>
+            <div class="input-section">
+                <input type="text" id="user-prompt" placeholder="How can I help you today?" class="message-input">
+                <button id="send-btn" class="send-button">Send</button>
+            </div>
+            <div class="controls-section">
+                <button id="clear-history-btn" class="clear-button">Clear History</button>
+            </div>
+        </div>
+        <div class="status">
+            <p id="status-text">Ready</p>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
