@@ -224,12 +224,15 @@ async def send_user_message(user_message: str):
         message_history.append(user_message_obj)
         
         await mcp_client.connect_stdio_server(
-            "weather-mcp", 
-            "node", 
+            "weather", 
+            "npx", 
             [
-                "C:\\Users\\sharonxu\\mcp-weather-server\\dist\\index.js",
+                "-y",
+                "@timlukahorstmann/mcp-weather",
             ],
-            {}
+            {
+                "ACCUWEATHER_API_KEY": os.environ.get("ACCUWEATHER_API_KEY", ""),
+            }
         )
         
         # Pass the entire message history to maintain context
